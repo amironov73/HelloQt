@@ -1,3 +1,5 @@
+configuration: Debug
+platform: x64
 image: Visual Studio 2017
 
 init:
@@ -6,7 +8,7 @@ init:
 install:
   - set QTDIR=C:\Qt\5.10.1\msvc2017_64
   - set PATH=%QTDIR%\bin;%PATH%
-  - "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 
 build_script:
   - qmake HelloQt.pro
